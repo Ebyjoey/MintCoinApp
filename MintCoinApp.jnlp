@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<jnlp spec="1.0+" codebase="https://Ebyjoey.github.io/MintCoinApp/">
+<jnlp spec="1.0+" codebase="https://raw.githubusercontent.com/Ebyjoey/MintCoinApp/main/">
     <information>
         <title>MintCoin Application</title>
         <vendor>Ebyjoey</vendor>
@@ -10,7 +10,7 @@
     </security>
     <resources>
         <j2se version="1.8+" />
-        <jar href="https://Ebyjoey.github.io/MintCoinApp/MintCoinApp.jar" main="true"/> <!-- Ensure this matches your actual JAR file name -->
+        <jar href="https://raw.githubusercontent.com/Ebyjoey/MintCoinApp/main/MintCoinApp.jar" main="true"/>
     </resources>
     <application-desc main-class="com.mints.MintCoinApp"/>
 </jnlp>

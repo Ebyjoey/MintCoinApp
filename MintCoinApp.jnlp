@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+" codebase="https://Ebyjoey.github.io/MintCoinApp/">
+    <information>
+        <title>MintCoin Application</title>
+        <vendor>Ebyjoey</vendor>
+        <description>A simple currency converter application</description>
+    </information>
+    <security>
+        <all-permissions/>
+    </security>
+    <resources>
+        <j2se version="1.8+" />
+        <jar href="MintCoinApp.jar" main="true"/> <!-- Ensure this matches your actual JAR file name -->
+    </resources>
+    <application-desc main-class="com.mints.MintCoinApp"/>
+</jnlp>

@@ -1,0 +1,39 @@
+{
+    "name": "Mintcoin (FMC)",
+    "symbol": "FMC",
+    "totalSupply": 1000000,
+    "holders": [
+        {
+            "address": "0x1234567890abcdef1234567890abcdef12345678",
+            "balance": 5000
+        },
+        {
+            "address": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+            "balance": 10000
+        },
+        {
+            "address": "0x7890123456789012345678901234567890123456",
+            "balance": 2500
+        }
+    ],
+    "transactions": [
+        {
+            "from": "0x1234567890abcdef1234567890abcdef12345678",
+            "to": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+            "amount": 500,
+            "txHash": "0x112233445566778899aabbccddeeff0011223344"
+        },
+        {
+            "from": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+            "to": "0x7890123456789012345678901234567890123456",
+            "amount": 1000,
+            "txHash": "0x5566778899aabbccddeeff001122334455667788"
+        },
+        {
+            "from": "0x7890123456789012345678901234567890123456",
+            "to": "0x1234567890abcdef1234567890abcdef12345678",
+            "amount": 250,
+            "txHash": "0x99aabbccddeeff112233445566778899aabbccdd"
+        }
+    ]
+}

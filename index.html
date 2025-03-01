@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mintcoin Trial App</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+</head>
+<body>
+    <h1>Welcome to Mintcoin Trial</h1>
+    <p><strong>Mintcoin (FMC)</strong> - Total Supply: <span id="totalSupply"></span></p>
+    <p><strong>Your Address:</strong> <span id="userAddress"></span></p>
+    <p><strong>Your Balance:</strong> <span id="userBalance"></span></p>
+    <button onclick="connectWallet()">Connect Wallet</button>
+
+    <script>
+        // Load the trial data from the Python server (JSON file)
+        fetch('trial_files/trial_data.json')
+            .then(response => response.json())
+            .then(data => {
+                // Simulate displaying Mintcoin data
+                document.getElementById('totalSupply').textContent = data.totalSupply;
+                const userAddress = "0x1234567890abcdef1234567890abcdef12345678"; // Example address from trial data
+                document.getElementById('userAddress').textContent = userAddress;
+                
+                // Find balance for the user address
+                const userBalance = data.holders.find(holder => holder.address === userAddress)?.balance || 0;
+                document.getElementById('userBalance').textContent = userBalance;
+            })
+            .catch(error => console.log('Error fetching trial data:', error));
+
+        // Function to connect to Web3 wallet (MetaMask)
+        function connectWallet() {
+            if (typeof window.ethereum !== 'undefined') {
+                ethereum.request({ method: 'eth_requestAccounts' })
+                    .then(accounts => {
+                        const userAddress = accounts[0];
+                        document.getElementById('userAddress').textContent = userAddress;
+                    })
+                    .catch(error => console.log('User denied wallet connection:', error));
+            } else {
+                alert('Please install MetaMask!');
+            }
+        }
+    </script>
+</body>
+</html>

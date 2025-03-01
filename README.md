@@ -1,4 +1,3 @@
-# MintCoinApp
 # Mintcoin App - A Web3 Blockchain-based Cryptocurrency
 
 ## Overview
